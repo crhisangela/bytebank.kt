@@ -2,12 +2,12 @@ fun main() {
     println("Bem-Vinde ao ByteBank")    //println = printe e pule linha//
     //var titular = "Crhis""     val não pode mudar o valor, para criar variavel se usa o var//
 
-    val contaAlex = Conta()
+    val contaAlex = Conta("Alex", 1000)
     contaAlex.titular = "Alex"
     contaAlex.numero = 1000
     contaAlex.deposita(200.0)
 
-    val contaFran = Conta()
+    val contaFran = Conta("Fran", 1001)
     contaFran.titular = "Fran"
     contaFran.numero = 1001
     contaFran.deposita(300.0)
@@ -35,9 +35,9 @@ fun main() {
 
     println("Transferencia para o ALex")
 
-    if (contaFran.transfere(100.0 ,contaAlex)){
+    if (contaFran.transfere(100.0, contaAlex)) {
         println("Transferencia sucedida")
-    } else{
+    } else {
         println("Falha na transferencia")
     }
 
@@ -45,34 +45,32 @@ fun main() {
 }
 
 
-class Conta() {
-    var titular = ""
-    var numero = 0
+class Conta(var titular: String, var numero: Int) {
     var saldo = 0.0
         private set
 
-    fun deposita(valor: Double){
-        if (valor > 0){
-        this.saldo += valor}
+    fun deposita(valor: Double) {
+        if (valor > 0) {
+            this.saldo += valor
+        }
     }
 
-    fun saca(valor: Double){
+    fun saca(valor: Double) {
         if (saldo >= valor) {
             saldo -= valor
-        }else {
+        } else {
             println("Você não tem saldo suficiente para realizar este saque!")
         }
     }
 
-    fun transfere(valor: Double, destino: Conta): Boolean{
+    fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
             saldo -= valor
             destino.deposita(valor)
             return true
         }
-            return false
+        return false
     }
-
 
 
 }
@@ -92,36 +90,37 @@ fun testaLacos() {
         i++;
     }
 
-fun testaCondicoes(saldo: Double) {
-    if (saldo > 0.0) {
-        println("Seu saldo atual é POSITIVO")
-    } else if (saldo == 0.0) {
-        println("A conta é neutra")
-    } else {
-        println("A conta está NEGATIVA")
-    }
+    fun testaCondicoes(saldo: Double) {
+        if (saldo > 0.0) {
+            println("Seu saldo atual é POSITIVO")
+        } else if (saldo == 0.0) {
+            println("A conta é neutra")
+        } else {
+            println("A conta está NEGATIVA")
+        }
 
-    //OU USAR O WHEN//
+        //OU USAR O WHEN//
 
-    when {
-        saldo > 0.0 -> println("Seu saldo atual é POSITIVO")
-        saldo == 0.0 -> println("A conta é neutra")
-        else -> println("A conta está NEGATIVA")
-    }
+        when {
+            saldo > 0.0 -> println("Seu saldo atual é POSITIVO")
+            saldo == 0.0 -> println("A conta é neutra")
+            else -> println("A conta está NEGATIVA")
+        }
 
 
-    //cria 5 contas
-    for (i in 1..5) {
-        //...
-    }
+        //cria 5 contas
+        for (i in 1..5) {
+            //...
+        }
 
 //cria 5 contas na ordem decrescente
-    for (i in 5 downTo 1) {
-        //...
-    }
+        for (i in 5 downTo 1) {
+            //...
+        }
 
 //cria 3 contas de 2 em 2
-    for (i in 1..5 step 2) {
-        //...
+        for (i in 1..5 step 2) {
+            //...
+        }
     }
-}}
+}
