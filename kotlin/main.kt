@@ -4,12 +4,10 @@ fun main() {
 
     val contaAlex = Conta("Alex", 1000)
     contaAlex.titular = "Alex"
-    contaAlex.numero = 1000
     contaAlex.deposita(200.0)
 
     val contaFran = Conta("Fran", 1001)
     contaFran.titular = "Fran"
-    contaFran.numero = 1001
     contaFran.deposita(300.0)
 
 
@@ -45,7 +43,7 @@ fun main() {
 }
 
 
-class Conta(var titular: String, var numero: Int) {
+class Conta(var titular: String, val numero: Int) {
     var saldo = 0.0
         private set
 
