@@ -4,6 +4,10 @@ open class Funcionario(
     val salario: Double
 ) {
 
-    open fun bonificacao(): Double = salario * 0.3
+    open val bonificacao: Double
+        get(){
+            println("bonificacao funcionario")
+            return salario * 0.3
+        }
 
 }

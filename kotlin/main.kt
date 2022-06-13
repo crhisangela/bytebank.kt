@@ -11,7 +11,7 @@ fun main() {
     )
 
     println("nome: ${alex.nome}")
-    println("bonificação: ${alex.bonificacao()}")
+    println("bonificação: ${alex.bonificacao}")
 
     val fran = Gerente(
         "Fran",
@@ -20,5 +20,19 @@ fun main() {
         123
     )
 
+    println("nome: ${fran.nome}")
+    println("bonificação: ${fran.bonificacao}")
+
+
+    val crhis = Diretor(
+        "Crhis",
+        "555.222.222-22",
+        5000.0,
+        123,
+        6000.0
+    )
+
+    println("nome: ${crhis.nome}")
+    println("bonificação: ${crhis.bonificacao}")
 
 }

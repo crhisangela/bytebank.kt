@@ -18,3 +18,7 @@ Introdução a orientação de objetos com kotlin: [video-aulas](https://cursos.
 
 ### Herança, polimorfismo e Interface:
 Introdução a herança, polimorfismo e Interface: [video-aulas](https://cursos.alura.com.br/course/kotlin-heranca-polimorfismo-interface)
+
+- Herança: criando e utilizando classes
+- Polimorfismo: reutilizando codigo
+- Interface
