@@ -1,8 +1,9 @@
 fun testaFuncionarios() {
-    val alex = Funcionario(
+    val alex = Gerente(
         "Alex",
         "111.111.111-11",
-        1000.0
+        1000.0,
+        1234
     )
 
     println("nome: ${alex.nome}")

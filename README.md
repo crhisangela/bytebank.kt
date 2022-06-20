@@ -21,4 +21,5 @@ Introdução a herança, polimorfismo e Interface: [video-aulas](https://cursos.
 
 - Herança: criando e utilizando classes
 - Polimorfismo: reeutilizar código em comum entre classes mãe e filhas
+- Abstração
 - Interface
